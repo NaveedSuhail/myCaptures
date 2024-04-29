@@ -9,15 +9,22 @@ body {
     overflow-x: hidden;
 }
 
+* {
+    box-sizing: border-box !important;
+}
+
 /* /////////////////////////////////////Custom styles for the navbar */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0; /* Fill the entire width */
+
     width: 100%;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0);
 }
+
 
 /* navbar links */
 .navbar-nav .nav-link {
@@ -46,12 +53,6 @@ body {
     height: 100vh;
     overflow: hidden; /* Hide overflow to ensure full-screen effect */
     z-index: -1; /* Place behind the navbar */
-}
-
-.carousel-item img {
-    object-fit: cover;
-    height: 100vh;
-    width: 100%;
 }
 
 .carousel-item img {
@@ -100,7 +101,7 @@ body {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 6vw;
     margin-bottom: 20px;
 }
 
@@ -150,7 +151,7 @@ hr {
 /* /////////////////////////////////////Custom styles for full-width photograph section */
 .full-width-photo {
     background-color: #c4c4c4b2;
-    padding: 1%;
+    padding: 0;
     border-radius: 0px;
 }
 
@@ -164,16 +165,18 @@ hr {
 .photo-caption {
     position: absolute;
     top: 25%;
-    width: 100%;
-    text-align: left;
+    left: 0;
+    max-width: 80%; /* Limit the width to avoid overflow */
+    text-align: center;
     padding: 0 20px;
     z-index: 1;
 }
 
 .photo-caption h1 {
-    font-size: 6rem;
+    font-size: 6vw;
     color: white;
 }
+
 
 /* /////////////////////////////////////Custom styles for text section */
 .text-section {
