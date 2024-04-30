@@ -1,11 +1,11 @@
 :root {
     --primary-color: #007bff;
     --secondary-color: #6c757d;
-    --font-family: 'Noto-serif', sans-serif;
+    --font-family: 'Laila', sans-serif;
 }
 
 body {
-    font-family: 'Noto-Serif', sans-serif;
+    font-family: 'Laila', sans-serif;
     overflow-x: hidden;
 }
 
@@ -19,7 +19,6 @@ body {
     top: 0;
     left: 0;
     right: 0; /* Fill the entire width */
-
     width: 100%;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0);
@@ -53,7 +52,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden; /* Hide overflow to ensure full-screen effect */
-    z-index: -1; /* Place behind the navbar */
+    z-index: 1; /* Place behind the navbar */
 }
 
 .carousel-item img {
@@ -66,9 +65,11 @@ body {
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 50%;
+    top: 90%;
     transform: translateY(-50%);
     z-index: 10;
+    font-size: 2rem;
+    color: white;
 }
 
 /* Adjust position of the previous and next icons */
